@@ -1,0 +1,35 @@
+/* src/components/landing/Features/FeaturesSection.module.css */
+
+.section {
+  padding-top: 56px;
+}
+
+.grid {
+  margin-top: 32px;
+  display: grid;
+  gap: 18px;
+}
+
+.card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  background: linear-gradient(150deg, #020617, #020617 40%, #0b1020);
+  padding: 18px 18px 16px;
+  font-size: 14px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.card p {
+  margin: 0;
+  color: var(--fg-soft);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

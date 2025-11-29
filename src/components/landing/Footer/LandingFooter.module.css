@@ -1,0 +1,66 @@
+/* src/components/landing/Footer/LandingFooter.module.css */
+
+.footer {
+  padding: 40px 16px 26px;
+  border-top: 1px solid rgba(15, 23, 42, 0.9);
+  background: linear-gradient(180deg, #020617, #020617 50%, #020617);
+  margin-top: 40px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  text-transform: lowercase;
+}
+
+.tagline {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--fg-soft);
+}
+
+.right {
+  display: flex;
+  gap: 12px;
+}
+
+.link {
+  font-size: 12px;
+  color: var(--fg-soft);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--accent);
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 11px;
+  color: var(--fg-soft);
+  border-top: 1px solid rgba(15, 23, 42, 0.9);
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.dim {
+  opacity: 0.8;
+}
+
+@media (max-width: 640px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

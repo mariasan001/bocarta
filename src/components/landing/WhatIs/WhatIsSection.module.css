@@ -1,0 +1,20 @@
+/* src/components/landing/WhatIs/WhatIsSection.module.css */
+
+.section {
+  padding-top: 40px;
+}
+
+.textBlock {
+  margin-top: 28px;
+  max-width: 720px;
+  font-size: 14px;
+  color: var(--fg-soft);
+}
+
+.textBlock p {
+  margin: 0 0 12px;
+}
+
+.textBlock strong {
+  color: var(--fg);
+}
