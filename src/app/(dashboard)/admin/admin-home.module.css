@@ -1,0 +1,20 @@
+/* src/app/(dashboard)/admin/admin-home.module.css */
+
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 18px 18px 14px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  box-shadow: var(--shadow-soft, 0 18px 40px rgba(0, 0, 0, 0.04));
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.text {
+  font-size: 13px;
+  color: var(--bocarta-muted, #5f5f5f);
+}

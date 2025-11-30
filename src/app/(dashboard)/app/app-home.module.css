@@ -1,0 +1,51 @@
+/* src/app/(dashboard)/app/app-home.module.css */
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.cardPrimary {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 18px 18px 14px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  box-shadow: var(--shadow-soft, 0 18px 40px rgba(0, 0, 0, 0.04));
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 16px 16px 14px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.text {
+  font-size: 13px;
+  color: var(--bocarta-muted, #5f5f5f);
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.list {
+  font-size: 12px;
+  color: var(--bocarta-muted, #5f5f5f);
+  padding-left: 16px;
+}
