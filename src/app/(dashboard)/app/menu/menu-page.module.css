@@ -1,0 +1,7 @@
+/* src/app/(dashboard)/app/menu/menu-page.module.css */
+
+.page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
