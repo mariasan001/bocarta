@@ -1,0 +1,68 @@
+import type { Promo } from '../types';
+
+export const mockPromos: Promo[] = [
+  {
+    id: 'promo-hh-tacos',
+    name: 'Happy Hour Tacos',
+    type: 'happyHour',
+    status: 'active',
+    schedule: {
+      daysOfWeek: ['J', 'V', 'S'],
+      startTime: '17:00',
+      endTime: '19:30',
+    },
+    scope: 'categories',
+    categoriesNames: ['Tacos'],
+    itemsCount: 6,
+    discountLabel: '-20% en tacos',
+    highlight: true,
+  },
+  {
+    id: 'promo-bebidas-2x1',
+    name: '2x1 en bebidas clásicas',
+    type: 'twoForOne',
+    status: 'scheduled',
+    schedule: {
+      daysOfWeek: ['S', 'D'],
+      startTime: '14:00',
+      endTime: '16:00',
+      startDate: '2025-12-15',
+      endDate: '2026-01-15',
+    },
+    scope: 'categories',
+    categoriesNames: ['Bebidas'],
+    itemsCount: 4,
+    discountLabel: '2x1 vasos',
+  },
+  {
+    id: 'promo-postre',
+    name: 'Postre a $20 con consumo',
+    type: 'combo',
+    status: 'paused',
+    schedule: {
+      daysOfWeek: ['L', 'M', 'X', 'J', 'V'],
+      startTime: '13:00',
+      endTime: '17:00',
+    },
+    scope: 'items',
+    categoriesNames: ['Postres'],
+    itemsCount: 1,
+    discountLabel: '$20 en flan',
+  },
+  {
+    id: 'promo-lunes',
+    name: 'Lunes de taco sencillo',
+    type: 'discount',
+    status: 'finished',
+    schedule: {
+      daysOfWeek: ['L'],
+      startTime: '18:00',
+      endTime: '22:00',
+      startDate: '2025-09-01',
+      endDate: '2025-10-01',
+    },
+    scope: 'entireMenu',
+    itemsCount: 12,
+    discountLabel: '-10% en toda la cuenta',
+  },
+];
