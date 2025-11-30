@@ -10,10 +10,10 @@ export default function Header() {
     <div className={styles.wrapper}>
       <div className="sectionInner">
         <div className={styles.inner}>
-          {/* Marca bocarta con logo */}
+          {/* Marca Bocarta con logo → siempre vuelve al inicio */}
           <Link href="#hero" className={styles.brand} aria-label="Ir al inicio">
             <Image
-              src="/img/logo.svg"   // <-- tu logo en /public/img/logo.svg
+              src="/img/logo.svg"
               alt="bocarta · menú digital"
               width={120}
               height={32}
@@ -22,7 +22,7 @@ export default function Header() {
             />
           </Link>
 
-          {/* Menú principal */}
+          {/* Menú principal (secciones de la landing) */}
           <nav className={styles.nav}>
             <a href="#hero" className={`${styles.navItem} ${styles.navItemActive}`}>
               Inicio
@@ -40,16 +40,18 @@ export default function Header() {
 
           {/* Acciones derecha */}
           <div className={styles.actions}>
-            <button type="button" className={styles.loginBtn}>
+            {/* Ahora es un <Link> a /login, con estilos de botón */}
+            <Link href="/login" className={styles.loginBtn}>
               Iniciar sesión
-            </button>
-            <a href="#pricing" className={styles.ctaBtn}>
+            </Link>
+
+            {/* CTA puede ir a registro para arrancar el onboarding */}
+            <Link href="/register" className={styles.ctaBtn}>
               Probar Bocarta gratis
-            </a>
+            </Link>
           </div>
         </div>
       </div>
     </div>
   );
 }
-
