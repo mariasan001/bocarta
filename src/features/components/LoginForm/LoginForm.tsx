@@ -8,8 +8,8 @@ import { Mail, Lock, Loader2 } from 'lucide-react';
 
 
 import s from './LoginForm.module.css';
-import { useMockAuth } from '../hooks/useMockAuth';
-import { AuthUser } from '../auth/types';
+import { useMockAuth } from '../../hooks/useMockAuth';
+import { AuthUser } from '../../auth/types';
 
 export default function LoginForm() {
   const router = useRouter();

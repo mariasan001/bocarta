@@ -1,6 +1,6 @@
 // src/app/(auth)/login/page.tsx
 
-import LoginForm from '@/features/components/LoginForm';
+import LoginForm from '@/features/components/LoginForm/LoginForm';
 import s from './login-page.module.css';
 
 export default function LoginPage() {
