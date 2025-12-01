@@ -1,0 +1,432 @@
+/* src/features/admin/components/AdminHomeScreen/AdminHomeScreen.module.css */
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.headerLeft {
+  display: flex;
+  gap: 10px;
+}
+
+.iconBadge {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #666666;
+  max-width: 460px;
+}
+
+.headerActions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.primaryBtn {
+  border-radius: 999px;
+  border: none;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.ghostBtn {
+  border-radius: 999px;
+  border: 1px solid #dedede;
+  padding: 7px 12px;
+  font-size: 12px;
+  background: #ffffff;
+  color: #333333;
+  cursor: pointer;
+}
+
+/* KPIs */
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 960px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .headerActions {
+    align-self: flex-start;
+  }
+
+  .kpiGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.kpiCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 10px 12px;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kpiHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kpiLabel {
+  font-size: 12px;
+  color: #666666;
+}
+
+.kpiChip {
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 10px;
+  background: #f6f6f6;
+  color: #555555;
+}
+
+.kpiValueRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.kpiValue {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.kpiTrend {
+  font-size: 11px;
+  color: #666666;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.kpiTrendUp {
+  color: #1f7a33;
+}
+
+.kpiTrendDown {
+  color: #b23b3b;
+}
+
+.kpiBarTrack {
+  height: 5px;
+  border-radius: 999px;
+  background: #f1f1f1;
+  overflow: hidden;
+}
+
+.kpiBarFill {
+  width: 60%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--bocarta-accent, #dcd917);
+}
+
+/* Grid principal */
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
+  gap: 14px;
+}
+
+@media (max-width: 1040px) {
+  .mainGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.mainCol,
+.sideCol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Card genérica */
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 12px 12px 10px;
+  border: 1px solid #e8e8e8;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  gap: 8px;
+}
+
+.cardTitleRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cardTitle {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cardPill,
+.cardPillMuted {
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 10px;
+}
+
+.cardPill {
+  background: #f4f4f4;
+  color: #555555;
+}
+
+.cardPillMuted {
+  background: #fafafa;
+  color: #888888;
+}
+
+/* Actividad */
+
+.activityList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.activityItem {
+  padding: 8px 6px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.activityItem:nth-child(2n) {
+  background: #fafafa;
+}
+
+.activityMain {
+  min-width: 0;
+}
+
+.activityTitle {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.activitySubtitle {
+  font-size: 12px;
+  color: #777777;
+}
+
+.activityMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.activityBadge {
+  border-radius: 999px;
+  padding: 1px 7px;
+  font-size: 10px;
+  background: #fffce0;
+  color: #846000;
+}
+
+.activityTime {
+  font-size: 11px;
+  color: #999999;
+}
+
+/* MRR */
+
+.mrrGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) auto minmax(0, 1.1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.mrrDivider {
+  width: 1px;
+  align-self: stretch;
+  background: #eeeeee;
+}
+
+.mrrLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #777777;
+}
+
+.mrrValue {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mrrValueSmall {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mrrHint {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* Uso del producto */
+
+.usageList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.usageItem {
+  display: grid;
+  gap: 4px;
+}
+
+.usageLabelRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #555555;
+}
+
+.usageLabel {
+  max-width: 70%;
+}
+
+.usageValue {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.usageBarTrack {
+  height: 6px;
+  border-radius: 999px;
+  background: #f1f1f1;
+  overflow: hidden;
+}
+
+.usageBarFill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--bocarta-accent, #dcd917);
+}
+
+/* Tickets */
+
+.ticketsRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.ticketStat {
+  flex: 1;
+  padding: 6px 6px 7px;
+  border-radius: 14px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.ticketNumber {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ticketNumberWarning {
+  font-size: 18px;
+  font-weight: 700;
+  color: #b2531a;
+}
+
+.ticketLabel {
+  font-size: 11px;
+  color: #777777;
+}
+
+.ticketHint {
+  font-size: 11px;
+  color: #666666;
+}
+
+/* Atajos */
+
+.quickActions {
+  display: grid;
+  gap: 6px;
+}
+
+.quickBtn {
+  border-radius: 999px;
+  border: 1px solid #e3e3e3;
+  padding: 6px 9px;
+  font-size: 12px;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  justify-content: flex-start;
+}
+
+.quickBtn:hover {
+  border-color: #cfcfcf;
+  background: #fafafa;
+}

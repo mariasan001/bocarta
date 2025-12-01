@@ -1,51 +1,65 @@
 /* src/app/(dashboard)/app/app-home.module.css */
 
 .grid {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-  gap: 14px;
+  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.3fr);
+  gap: 16px;
 }
 
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
+.colMain,
+.colSide {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
+/* Card de bienvenida */
 .cardPrimary {
+  border-radius: 18px;
+  border: 1px solid #e8e8e8;
   background: #ffffff;
-  border-radius: 20px;
-  padding: 18px 18px 14px;
-  border: 1px solid var(--bocarta-border-subtle, #dedede);
-  box-shadow: var(--shadow-soft, 0 18px 40px rgba(0, 0, 0, 0.04));
-}
-
-.card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 16px 16px 14px;
-  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  padding: 12px 12px 14px;
 }
 
 .title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 4px;
 }
 
 .text {
   font-size: 13px;
-  color: var(--bocarta-muted, #5f5f5f);
+  color: #666666;
+}
+
+/* Card lateral “próximos pasos” */
+.card {
+  border-radius: 18px;
+  border: 1px solid #e8e8e8;
+  background: #ffffff;
+  padding: 10px 11px 11px;
 }
 
 .cardTitle {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   margin-bottom: 6px;
 }
 
 .list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 4px;
   font-size: 12px;
-  color: var(--bocarta-muted, #5f5f5f);
-  padding-left: 16px;
+  color: #555555;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }

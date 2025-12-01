@@ -1,0 +1,376 @@
+.layout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.headerLeft {
+  display: flex;
+  gap: 10px;
+}
+
+.iconBadge {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #666666;
+  max-width: 560px;
+}
+
+.headerRight {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.metaRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.metaItem {
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 140px;
+}
+
+.metaLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #777777;
+}
+
+.metaValue {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.primaryBtn {
+  border-radius: 999px;
+  border: none;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .headerRight {
+    align-items: flex-start;
+  }
+
+  .metaRow {
+    justify-content: flex-start;
+  }
+}
+
+/* GRID */
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.4fr);
+  gap: 16px;
+}
+
+.colMain,
+.colSide {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* CARD BASE */
+
+.card {
+  border-radius: 18px;
+  border: 1px solid #e8e8e8;
+  background: #ffffff;
+  padding: 10px 11px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cardTitleRow {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.cardIconWrap {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardTitle {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cardText {
+  font-size: 12px;
+  color: #777777;
+  max-width: 420px;
+}
+
+/* FORM GRID */
+
+.formGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.field,
+.fieldInline {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fieldInline {
+  gap: 8px;
+}
+
+@media (min-width: 880px) {
+  .fieldInline {
+    flex-direction: row;
+  }
+
+  .fieldInline .field {
+    flex: 1;
+  }
+}
+
+/* INPUTS */
+
+.label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #444444;
+}
+
+.input {
+  border-radius: 999px;
+  border: 1px solid #dedede;
+  padding: 6px 9px;
+  font-size: 12px;
+  outline: none;
+  width: 100%;
+}
+
+.input:focus {
+  border-color: #000000;
+}
+
+.selectWrapper {
+  border-radius: 999px;
+  border: 1px solid #dedede;
+  padding: 0 8px;
+  background: #ffffff;
+}
+
+.select {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 6px 0;
+  font-size: 12px;
+  background: transparent;
+}
+
+.fieldHint {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* PILLS & TOGGLES */
+
+.pillRow {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pillButtonActive {
+  border-radius: 999px;
+  border: none;
+  padding: 4px 10px;
+  font-size: 11px;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.pillButtonGhost {
+  border-radius: 999px;
+  border: 1px solid #dedede;
+  padding: 4px 10px;
+  font-size: 11px;
+  background: #ffffff;
+  color: #555555;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.toggleRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.toggleLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #333333;
+}
+
+.toggleLabel input[type='checkbox'] {
+  width: 14px;
+  height: 14px;
+}
+
+.badgeWarning {
+  align-self: flex-start;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 10px;
+  background: #fff8d6;
+  color: #8a6a00;
+}
+
+/* ACCENT */
+
+.accentPreviewRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.accentDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: var(--bocarta-accent, #dcd917);
+  border: 1px solid #c4c400;
+}
+
+.accentCode {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* INLINE TEXT */
+
+.inlineRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.inlineText {
+  font-size: 12px;
+  color: #444444;
+}
+
+/* QUICK ACTIONS */
+
+.quickActions {
+  display: grid;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.quickBtn {
+  border-radius: 999px;
+  border: 1px dashed #dedede;
+  padding: 5px 10px;
+  font-size: 11px;
+  background: #fafafa;
+  color: #777777;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.quickBtn:disabled {
+  cursor: default;
+}
+
+/* MISC */
+
+@media (max-width: 880px) {
+  .fieldInline {
+    flex-direction: column;
+  }
+}

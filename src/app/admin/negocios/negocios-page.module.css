@@ -1,0 +1,11 @@
+/* src/app/admin/negocios/negocios-page.module.css */
+
+.page {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 14px 10px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

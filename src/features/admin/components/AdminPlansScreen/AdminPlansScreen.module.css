@@ -1,0 +1,543 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.headerLeft {
+  display: flex;
+  gap: 10px;
+}
+
+.iconBadge {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #666666;
+  max-width: 520px;
+}
+
+.headerActions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.primaryBtn {
+  border-radius: 999px;
+  border: none;
+  padding: 8px 13px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.ghostBtn {
+  border-radius: 999px;
+  border: 1px solid #dedede;
+  padding: 7px 11px;
+  font-size: 12px;
+  background: #ffffff;
+  color: #333333;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .headerActions {
+    align-self: flex-start;
+  }
+}
+
+/* Billing toggle */
+
+.billingRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.billingLabel {
+  font-size: 12px;
+  color: #777777;
+}
+
+.billingToggle {
+  border-radius: 999px;
+  background: #f4f4f4;
+  padding: 3px;
+  display: inline-flex;
+  gap: 2px;
+}
+
+.billingOption {
+  border-radius: 999px;
+  border: none;
+  padding: 4px 9px;
+  font-size: 11px;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #555555;
+}
+
+.billingOptionActive {
+  background: #000000;
+  color: #ffffff;
+}
+
+.billingBadge {
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 999px;
+  background: var(--bocarta-accent, #dcd917);
+  color: #000000;
+}
+
+/* Grid principal */
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.1fr);
+  gap: 16px;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Main */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sectionTitle {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.sectionHint {
+  font-size: 12px;
+  color: #777777;
+}
+
+/* Cards de planes */
+
+.plansGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+}
+
+@media (min-width: 1040px) {
+  .plansGrid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+.planCard {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 12px 12px 10px;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.planCardRecommended {
+  border-color: var(--bocarta-accent, #dcd917);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02);
+}
+
+.planHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.planNameRow {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.planName {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.planDescription {
+  font-size: 12px;
+  color: #777777;
+  max-width: 320px;
+}
+
+.planTag {
+  align-self: flex-start;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 11px;
+  background: #fffbd4;
+  color: #836400;
+}
+
+.planStatusRow {
+  display: flex;
+  align-items: flex-start;
+}
+
+.statusChip {
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.statusActive {
+  background: #e5ffe8;
+  color: #1f6b32;
+}
+
+.statusHidden {
+  background: #f4f4f4;
+  color: #777777;
+}
+
+.statusUpcoming {
+  background: #fff4e6;
+  color: #b45720;
+}
+
+/* Precio */
+
+.priceBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.priceNumber {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.priceSuffix {
+  font-size: 12px;
+  color: #777777;
+}
+
+.priceHint {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* Features */
+
+.featuresBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.featuresList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.featurePill {
+  border-radius: 999px;
+  padding: 3px 7px;
+  font-size: 11px;
+  background: #f5f5f5;
+  color: #555555;
+}
+
+.limitsText {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* Métricas */
+
+.metricsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metricLabel {
+  font-size: 11px;
+  color: #777777;
+}
+
+.metricValue {
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Footer card */
+
+.cardFooter {
+  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+
+.cardFooterLeft {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.cardPrimaryBtn {
+  border-radius: 999px;
+  border: 1px solid #000000;
+  padding: 4px 9px;
+  font-size: 11px;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.cardGhostBtn {
+  border-radius: 999px;
+  border: 1px solid #dedede;
+  padding: 4px 9px;
+  font-size: 11px;
+  background: #ffffff;
+  color: #333333;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.cardTextBtn {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 11px;
+  color: #444444;
+  cursor: pointer;
+}
+
+/* Cambios programados */
+
+.changesSection {
+  margin-top: 6px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 10px 11px;
+  border: 1px dashed #e4e4e4;
+}
+
+.changesHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.changesTitle {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.changesBadge {
+  border-radius: 999px;
+  padding: 2px 7px;
+  font-size: 10px;
+  background: #f4f4f4;
+  color: #777777;
+}
+
+.changesText {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* Side column */
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 11px 12px 10px;
+  border: 1px solid #e8e8e8;
+}
+
+.cardTitle {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.cardText {
+  font-size: 12px;
+  color: #777777;
+  margin-bottom: 8px;
+}
+
+/* Stats */
+
+.cardStatsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.cardStat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cardStatLabel {
+  font-size: 11px;
+  color: #777777;
+}
+
+.cardStatValue {
+  font-size: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.cardList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.cardList li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.cardListLabel {
+  color: #777777;
+}
+
+.cardListValue {
+  font-weight: 600;
+}
+
+/* Toggles */
+
+.toggleGroup {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.toggle {
+  border-radius: 999px;
+  border: 1px solid #dedede;
+  padding: 5px 9px;
+  font-size: 11px;
+  background: #ffffff;
+  color: #444444;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggleOn {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+/* Note */
+
+.noteBox {
+  border-radius: 14px;
+  padding: 8px 9px;
+  border: 1px dashed #dedede;
+  background: #fafafa;
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  font-size: 11px;
+  color: #555555;
+}
