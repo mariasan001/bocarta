@@ -1,0 +1,536 @@
+/* src/features/settings/components/SettingsScreen/SettingsScreen.module.css */
+
+.layout {
+  width: 100%;
+  max-width: 1180px;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.headerLeft {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.iconBadge {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--bocarta-muted, #5f5f5f);
+  max-width: 520px;
+}
+
+.headerRight {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.primaryBtn {
+  border-radius: 999px;
+  border: none;
+  padding: 8px 13px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.ghostBtn {
+  border-radius: 999px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  padding: 8px 12px;
+  font-size: 12px;
+  background: #ffffff;
+  color: var(--bocarta-ink, #000000);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* Summary */
+
+.summaryStrip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 720px) {
+  .summaryStrip {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.summaryCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 8px 10px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  display: grid;
+  gap: 2px;
+}
+
+.summaryLabel {
+  font-size: 11px;
+  color: #555555;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.summaryValue {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.summaryNote {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* Grid principal */
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.1fr);
+  gap: 16px;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.main {
+  display: grid;
+  gap: 10px;
+}
+
+.side {
+  display: grid;
+  gap: 10px;
+}
+
+/* Cards */
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 12px 12px 10px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+}
+
+.cardHeader {
+  margin-bottom: 8px;
+}
+
+.cardTitleRow {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.cardTitle {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cardText {
+  font-size: 12px;
+  color: #777777;
+}
+
+/* Form layout */
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 780px) {
+  .formGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.formGridCompact {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+@media (max-width: 780px) {
+  .formGridCompact {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.formField {
+  display: grid;
+  gap: 3px;
+}
+
+.label {
+  font-size: 11px;
+  color: #777777;
+}
+
+.input,
+.select {
+  border-radius: 12px;
+  border: 1px solid #e2e2e2;
+  padding: 6px 8px;
+  font-size: 12px;
+  background: #ffffff;
+}
+
+.input::placeholder {
+  color: #bbbbbb;
+}
+
+/* Inputs con icono */
+
+.inputWithIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 8px;
+  color: #999999;
+}
+
+.selectBare,
+.inputBare {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #e2e2e2;
+  padding: 6px 8px 6px 26px;
+  font-size: 12px;
+  background: #ffffff;
+}
+
+/* Tags */
+
+.inlineTags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag,
+.tagStrong {
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 11px;
+  background: #f4f4f4;
+  color: #555555;
+}
+
+.tagStrong {
+  background: #000000;
+  color: #ffffff;
+}
+
+.hint {
+  margin-top: 2px;
+  font-size: 10px;
+  color: #999999;
+}
+
+/* Secciones dentro de card */
+
+.sectionBlock {
+  margin-top: 8px;
+  border-top: 1px dashed #eeeeee;
+  padding-top: 8px;
+  display: grid;
+  gap: 6px;
+}
+
+.sectionTitle {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Style chips */
+
+.styleChips {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+@media (max-width: 780px) {
+  .styleChips {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.styleChip {
+  border-radius: 14px;
+  border: 1px solid #eeeeee;
+  padding: 6px 7px;
+  background: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  display: grid;
+  gap: 2px;
+}
+
+.styleChipActive {
+  border-color: #000000;
+  box-shadow: 0 0 0 1px #000000;
+}
+
+.styleChipLabel {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.styleChipDescription {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* Toggles */
+
+.toggleList {
+  display: grid;
+  gap: 6px;
+}
+
+.toggleRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+
+.toggleTexts {
+  display: grid;
+  gap: 1px;
+}
+
+.toggleLabel {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.toggleDescription {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* Switch base */
+
+.switchBtn {
+  border: none;
+  background: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.switchBtnLocked {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.switchTrack {
+  width: 32px;
+  height: 18px;
+  border-radius: 999px;
+  background: #e2e2e2;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.switchThumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: #ffffff;
+  transform: translateX(0);
+  transition: transform 0.16s ease;
+}
+
+.switchThumbOnSimple {
+  transform: translateX(12px);
+}
+
+.switchThumbOff {
+  transform: translateX(0);
+}
+
+/* Switch tema micrositio */
+
+.switchLabel {
+  font-size: 11px;
+  color: #555555;
+}
+
+.switchTrackOn {
+  background: #000000;
+}
+
+.switchThumbOn {
+  background: #ffffff;
+  transform: translateX(14px);
+}
+
+/* Tema micrositio */
+
+.themeRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.themePreview {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.themeSwatchLight {
+  width: 40px;
+  height: 24px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffffff 0%, #f4f4f4 60%, #dedede 100%);
+  border: 1px solid #e2e2e2;
+}
+
+.themeLabel {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* Side: notificaciones y seguridad */
+
+.actionsColumn {
+  display: grid;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.secondaryBtnFull {
+  border-radius: 999px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  padding: 6px 10px;
+  font-size: 12px;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.inlineRow {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.inlineText {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* Divider */
+
+.divider {
+  margin: 10px 0;
+  border-top: 1px dashed #eeeeee;
+}
+
+/* Danger zone */
+
+.cardDanger {
+  border-radius: 16px;
+  border: 1px solid #ffe0e0;
+  background: #fff6f6;
+  padding: 10px 10px 9px;
+  display: grid;
+  gap: 4px;
+}
+
+.cardDangerHeader {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cardDangerTitle {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.cardDangerText {
+  font-size: 11px;
+  color: #8a3c3c;
+}
+
+.dangerBtn {
+  margin-top: 4px;
+  border-radius: 999px;
+  border: 1px solid #c03838;
+  padding: 5px 10px;
+  font-size: 11px;
+  background: #ffffff;
+  color: #c03838;
+  cursor: pointer;
+}
+
+/* Botones secundarios genéricos */
+
+.secondaryBtn {
+  border-radius: 999px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  padding: 6px 10px;
+  font-size: 12px;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
