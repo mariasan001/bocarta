@@ -1,0 +1,398 @@
+/* src/features/analytics/components/AnalyticsScreen/AnalyticsScreen.module.css */
+
+.layout {
+  width: 100%;
+  max-width: 1180px;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.headerLeft {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.iconBadge {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--bocarta-muted, #5f5f5f);
+  max-width: 520px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.rangeGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rangeLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #777777;
+}
+
+/* Range chips */
+
+.rangeChip {
+  border-radius: 999px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  padding: 4px 10px;
+  font-size: 12px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.rangeChipActive {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+/* Summary strip */
+
+.summaryStrip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 980px) {
+  .summaryStrip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .summaryStrip {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.summaryCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 10px 11px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.summaryIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summaryTexts {
+  display: grid;
+  gap: 2px;
+}
+
+.summaryLabel {
+  font-size: 11px;
+  color: #777777;
+}
+
+.summaryValue {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.summaryHint {
+  font-size: 11px;
+  color: #888888;
+}
+
+/* Grid principal */
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.1fr);
+  gap: 16px;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.main {
+  display: grid;
+  gap: 10px;
+}
+
+.side {
+  display: grid;
+  gap: 10px;
+}
+
+/* Card genérica */
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 12px 12px 10px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.cardTitle {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cardText {
+  font-size: 12px;
+  color: #777777;
+}
+
+.cardIconSoft {
+  color: #c0c0c0;
+}
+
+/* Visitas por día */
+
+.chartRow {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  min-height: 140px;
+}
+
+.dayColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.dayBarWrapper {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.dayBar {
+  width: 100%;
+  border-radius: 999px;
+  background: var(--bocarta-accent, #dcd917);
+}
+
+.dayValue {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.dayLabel {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* Horarios + platillos */
+
+.twoCols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 960px) {
+  .twoCols {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Horarios pico */
+
+.hourList {
+  display: grid;
+  gap: 6px;
+}
+
+.hourRow {
+  display: grid;
+  grid-template-columns: 60px minmax(0, 1fr) 34px;
+  gap: 6px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.hourLabel {
+  color: #777777;
+}
+
+.hourBarTrack {
+  height: 8px;
+  border-radius: 999px;
+  background: #f1f1f1;
+  overflow: hidden;
+}
+
+.hourBarFill {
+  height: 100%;
+  border-radius: inherit;
+  background: #000000;
+}
+
+.hourValue {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tabla platillos */
+
+.table {
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) 70px 90px 70px;
+  gap: 6px;
+  padding: 6px 8px;
+  align-items: center;
+}
+
+.tableHead {
+  background: #fafafa;
+  font-size: 11px;
+  font-weight: 600;
+  color: #666666;
+}
+
+.tableRow:not(.tableHead):nth-child(even) {
+  background: #fdfdfd;
+}
+
+.dishName {
+  font-weight: 500;
+}
+
+.mono {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.ratingCell {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  justify-content: flex-end;
+}
+
+.starIcon {
+  color: var(--bocarta-accent, #dcd917);
+}
+
+/* Sources */
+
+.sourceList {
+  display: grid;
+  gap: 6px;
+}
+
+.sourceRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.3fr);
+  gap: 6px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.sourceLabel {
+  color: #555555;
+}
+
+.sourceRight {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sourcePercent {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.sourceBarTrack {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: #f1f1f1;
+  overflow: hidden;
+}
+
+.sourceBarFill {
+  height: 100%;
+  border-radius: inherit;
+  background: #000000;
+}
+
+/* Bullets */
+
+.bulletList {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0;
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+  color: #777777;
+}
+
+.bulletList li::before {
+  content: '•';
+  margin-right: 6px;
+}

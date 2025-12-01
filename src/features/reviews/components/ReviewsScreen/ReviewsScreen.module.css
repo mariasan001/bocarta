@@ -1,0 +1,749 @@
+.layout {
+  width: 100%;
+  max-width: 1180px;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.headerLeft {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.iconBadge {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--bocarta-muted, #5f5f5f);
+  max-width: 520px;
+}
+
+.headerActions {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.primaryBtn {
+  border-radius: 999px;
+  border: none;
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.ghostBtn {
+  border-radius: 999px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  padding: 8px 12px;
+  font-size: 12px;
+  background: #ffffff;
+  color: var(--bocarta-ink, #000);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* Grid */
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.1fr);
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Main */
+
+.main {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 10px 12px 12px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Filtros */
+
+.filtersBar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.filtersGroup {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.filtersLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #777777;
+}
+
+.statusChip {
+  border-radius: 999px;
+  border: 1px solid transparent;
+  padding: 4px 8px;
+  font-size: 11px;
+  background: #f4f4f4;
+  color: #555555;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.statusChipActive {
+  background: #000000;
+  color: #ffffff;
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #c0c0c0;
+}
+
+.statusDot_new {
+  background: var(--bocarta-accent, #dcd917);
+}
+
+.statusDot_replied {
+  background: #27ae60;
+}
+
+.statusDot_archived {
+  background: #bbbbbb;
+}
+
+.statusDot_flagged {
+  background: #e67e22;
+}
+
+.ratingChip {
+  border-radius: 999px;
+  border: 1px solid transparent;
+  padding: 4px 8px;
+  font-size: 11px;
+  background: #f4f4f4;
+  color: #555555;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.ratingChipActive {
+  background: #000000;
+  color: #ffffff;
+}
+
+.iconOnlyBtn {
+  border-radius: 999px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* Lista de reseñas */
+
+.list {
+  display: grid;
+  gap: 8px;
+}
+
+.reviewCard {
+  border-radius: 14px;
+  border: 1px solid #eeeeee;
+  padding: 8px 10px;
+  background: #ffffff;
+  display: grid;
+  gap: 6px;
+}
+
+.reviewTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.reviewHeaderLeft {
+  display: flex;
+  gap: 8px;
+}
+
+.ratingPill {
+  border-radius: 999px;
+  padding: 3px 7px;
+  background: #000000;
+  display: inline-flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.meta {
+  min-width: 0;
+}
+
+.line1 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.customerName {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.visitBadge {
+  border-radius: 999px;
+  padding: 1px 6px;
+  font-size: 10px;
+  background: #f4f4f4;
+  color: #555555;
+}
+
+.featuredBadge {
+  border-radius: 999px;
+  padding: 1px 6px;
+  font-size: 10px;
+  background: #fff7d7;
+  color: #856100;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.line2 {
+  margin-top: 1px;
+  font-size: 11px;
+  color: #888888;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.metaSeparator {
+  color: #cccccc;
+}
+
+.badgeNew {
+  border-radius: 999px;
+  padding: 2px 7px;
+  font-size: 10px;
+  background: var(--bocarta-accent, #dcd917);
+  color: #000000;
+}
+
+.badgeFlagged {
+  border-radius: 999px;
+  padding: 2px 7px;
+  font-size: 10px;
+  background: #fff4e0;
+  color: #9a5a12;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.comment {
+  font-size: 13px;
+}
+
+.reviewBottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+
+.bottomLeft {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.textBtn {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 11px;
+  color: #444444;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.bottomRight {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.iconBtn {
+  border-radius: 999px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  width: 28px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.replyBtn {
+  border-radius: 999px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  padding: 4px 9px;
+  font-size: 11px;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.replyBtnSuccess {
+  background: #e9ffe2;
+  border-color: #c9f3c0;
+  color: #246c1c;
+}
+
+/* Estrellas */
+
+.starFull {
+  color: var(--bocarta-accent, #dcd917);
+}
+
+.starHalf {
+  color: var(--bocarta-accent, #dcd917);
+}
+
+.starEmpty {
+  color: #888888;
+}
+
+/* Empty */
+
+.emptyState {
+  padding: 14px 10px 16px;
+}
+
+.emptyTitle {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.emptyText {
+  font-size: 12px;
+  color: #777777;
+}
+
+/* Side */
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 12px 12px 10px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+}
+
+.cardTitle {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.cardText {
+  font-size: 12px;
+  color: #777777;
+  margin-bottom: 8px;
+}
+
+/* Rating summary */
+
+.ratingBlock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.ratingValue {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.ratingNumber {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.ratingMax {
+  font-size: 12px;
+  color: #777777;
+}
+
+.ratingStars {
+  display: inline-flex;
+  gap: 2px;
+}
+
+/* Summary */
+
+.summaryList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.summaryList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.summaryLabel {
+  color: #777777;
+}
+
+.summaryValue {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+/* Programa */
+
+.progressBox {
+  margin-top: 4px;
+  display: grid;
+  gap: 6px;
+}
+
+.progressHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+}
+
+.progressLabel {
+  font-weight: 600;
+}
+
+.progressBar {
+  height: 8px;
+  border-radius: 999px;
+  background: #f1f1f1;
+  position: relative;
+  overflow: hidden;
+}
+
+.progressFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 60%;
+  border-radius: inherit;
+  background: #000000;
+}
+
+.progressLegend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #777777;
+}
+
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #000000;
+}
+
+/* Note */
+
+.noteBox {
+  margin-top: 10px;
+  padding: 8px 9px;
+  border-radius: 14px;
+  background: #fafafa;
+  border: 1px dashed var(--bocarta-border-subtle, #dedede);
+  font-size: 11px;
+  color: #555555;
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+/* Sources */
+
+.sources {
+  display: grid;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.sourceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.sourceLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sourceValue {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+/* === Tabs Reseñas / Programas === */
+
+.tabs {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.tabBtn {
+  border-radius: 999px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  padding: 6px 12px;
+  font-size: 12px;
+  background: #ffffff;
+  color: var(--bocarta-ink, #000000);
+  cursor: pointer;
+}
+
+.tabBtnActive {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+/* === Layout de la pestaña Programas === */
+
+.programsLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.1fr);
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .programsLayout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Reaprovechamos .main y .side que ya tienes para las columnas */
+
+/* Header de la sección Programas */
+
+.programsHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.sectionTitle {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.sectionSubtitle {
+  font-size: 12px;
+  color: var(--bocarta-muted, #5f5f5f);
+  max-width: 520px;
+}
+
+/* Lista de programas */
+
+.programList {
+  display: grid;
+  gap: 10px;
+}
+
+.programCard {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 10px 12px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  display: grid;
+  gap: 8px;
+}
+
+.programCardHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.programName {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.programKind {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* Status del programa */
+
+.programStatus {
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.programStatus_active {
+  background: #e9ffe2;
+  color: #246c1c;
+}
+
+.programStatus_paused {
+  background: #fff7e0;
+  color: #9a6512;
+}
+
+.programStatus_draft {
+  background: #f4f4f4;
+  color: #555555;
+}
+
+/* Meta del programa */
+
+.programMeta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+}
+
+.programMetaRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.programMetaRow dt {
+  color: #777777;
+}
+
+.programMetaRow dd {
+  margin: 0;
+  text-align: right;
+  font-weight: 500;
+}
+
+/* Acciones */
+
+.programActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.programActionsRight {
+  display: flex;
+  gap: 4px;
+}
+
+/* Botones de texto e icono: reutilizamos clases existentes */
+
+.sectionSubtitle + .programList {
+  margin-top: 8px;
+}
+
+/* Bullets en el aside de Programas */
+
+.bulletList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+  color: #777777;
+}
+
+.bulletList li::before {
+  content: '•';
+  margin-right: 6px;
+}

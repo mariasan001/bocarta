@@ -1,0 +1,670 @@
+/* src/features/microsite/components/MicrositeScreen/MicrositeScreen.module.css */
+
+.layout {
+  width: 100%;
+  max-width: 1180px;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.headerLeft {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.iconBadge {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--bocarta-muted, #5f5f5f);
+  max-width: 520px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: flex-start;
+}
+
+.ghostBtn {
+  border-radius: 999px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  padding: 8px 12px;
+  font-size: 12px;
+  background: #ffffff;
+  color: var(--bocarta-ink, #000000);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* Grid */
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.1fr);
+  gap: 16px;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Preview */
+
+.previewCard {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 12px 12px 10px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.previewHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.previewHeaderLeft {
+  display: grid;
+  gap: 2px;
+}
+
+.previewLabel {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.previewHint {
+  font-size: 12px;
+  color: #777777;
+}
+
+/* Device switch */
+
+.previewControls {
+  display: flex;
+  align-items: flex-start;
+}
+
+.deviceSwitch {
+  border-radius: 999px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  padding: 2px;
+  display: inline-flex;
+  gap: 2px;
+}
+
+.deviceBtn {
+  border-radius: 999px;
+  border: none;
+  padding: 3px 7px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deviceBtnActive {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Frame */
+
+.previewFrame {
+  margin-top: 4px;
+  display: flex;
+  justify-content: center;
+  padding: 12px 4px 6px;
+}
+
+.previewFrameMobile {
+  align-items: center;
+}
+
+.previewFrameDesktop {
+  align-items: flex-start;
+}
+
+.phone {
+  width: 310px;
+  border-radius: 26px;
+  background: #f9f9f9;
+  border: 1px solid #e4e4e4;
+  padding: 10px 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 720px) {
+  .phone {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+.phoneClassic {
+  background: #f9f9f9;
+}
+
+.phoneMinimal {
+  background: #ffffff;
+}
+
+/* Phone content */
+
+.phoneHeader {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.logoCircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phoneHeaderTexts {
+  display: grid;
+  gap: 1px;
+}
+
+.phoneTitle {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.phoneSubtitle {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* Banner */
+
+.banner {
+  border-radius: 12px;
+  padding: 6px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: #fffde0;
+  border: 1px solid #f2e59c;
+}
+
+.bannerLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #857100;
+}
+
+.bannerText {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Nav chips */
+
+.navChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.navChip {
+  border-radius: 999px;
+  padding: 3px 9px;
+  font-size: 11px;
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Sections */
+
+.section {
+  border-radius: 14px;
+  padding: 7px 8px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  display: grid;
+  gap: 6px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sectionPill {
+  border-radius: 999px;
+  padding: 1px 7px;
+  font-size: 10px;
+  background: #f4f4f4;
+  color: #555555;
+}
+
+/* Dishes */
+
+.dishList {
+  display: grid;
+  gap: 6px;
+}
+
+.dishRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.dishName {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.dishMeta {
+  font-size: 11px;
+  color: #777777;
+}
+
+.dishRight {
+  display: flex;
+  align-items: center;
+}
+
+.price {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Reviews bubble */
+
+.reviewBubble {
+  border-radius: 12px;
+  background: #fafafa;
+  padding: 6px 7px;
+  display: grid;
+  gap: 2px;
+}
+
+.reviewText {
+  font-size: 12px;
+}
+
+.reviewMeta {
+  font-size: 10px;
+  color: #777777;
+}
+
+/* Info rows */
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.infoLabel {
+  color: #777777;
+}
+
+.infoValue {
+  font-weight: 500;
+}
+
+/* Panel derecho */
+
+.panel {
+  display: grid;
+  gap: 10px;
+}
+
+.panelCard {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 12px 12px 10px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.panelTitle {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.panelText {
+  font-size: 12px;
+  color: #777777;
+}
+
+.panelIconSoft {
+  color: #c0c0c0;
+}
+
+/* Template cards */
+
+.templateGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 960px) {
+  .templateGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.templateCard {
+  border-radius: 14px;
+  border: 1px solid #e7e7e7;
+  padding: 7px 8px;
+  background: #ffffff;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.templateCardActive {
+  border-color: #000000;
+  box-shadow: 0 0 0 1px #000000;
+}
+
+.templateIcon {
+  width: 26px;
+  height: 26px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.templateTexts {
+  display: grid;
+  gap: 2px;
+}
+
+.templateLabel {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.templateDescription {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* Fields */
+
+.fieldGroup {
+  display: grid;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.fieldLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #777777;
+}
+
+.inlineRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.secondaryBtn {
+  border-radius: 999px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  padding: 6px 10px;
+  font-size: 12px;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.fieldHint {
+  font-size: 11px;
+  color: #888888;
+}
+
+/* Toggles */
+
+.toggleList {
+  display: grid;
+  gap: 6px;
+}
+
+.toggleRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+
+.toggleTexts {
+  display: grid;
+  gap: 2px;
+}
+
+.toggleLabel {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.toggleDescription {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* Switch */
+
+.toggleSwitch {
+  position: relative;
+  width: 54px;
+  height: 24px;
+  border-radius: 999px;
+  border: 1px solid #dedede;
+  background: #f4f4f4;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.toggleSwitchOn {
+  background: #000000;
+  border-color: #000000;
+  color: #ffffff;
+}
+
+.toggleThumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+  transform: translateX(0);
+  transition: transform 0.16s ease-out;
+}
+
+.toggleSwitchOn .toggleThumb {
+  transform: translateX(24px);
+}
+
+.toggleIcon {
+  position: absolute;
+  right: 7px;
+  font-size: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* QRs */
+
+.qrRow {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .qrRow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.qrPreviewBox {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+}
+
+.qrFake {
+  width: 96px;
+  height: 96px;
+  border-radius: 12px;
+  background-image: linear-gradient(135deg, #000000 25%, transparent 25%),
+    linear-gradient(225deg, #000000 25%, transparent 25%),
+    linear-gradient(45deg, #000000 25%, transparent 25%),
+    linear-gradient(315deg, #000000 25%, #ffffff 25%);
+  background-position: 8px 0, 8px 0, 0 0, 0 0;
+  background-size: 8px 8px;
+  background-repeat: repeat;
+  border: 6px solid #ffffff;
+  box-shadow: 0 0 0 1px #000000;
+}
+
+.qrLabel {
+  font-size: 11px;
+  color: #777777;
+}
+
+.qrActions {
+  display: grid;
+  gap: 6px;
+}
+
+.urlBox {
+  display: grid;
+  gap: 2px;
+}
+
+.urlLabel {
+  font-size: 11px;
+  color: #777777;
+}
+
+.urlValueRow {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.urlValue {
+  flex: 1;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  padding: 5px 8px;
+  border-radius: 999px;
+  border: 1px solid #e4e4e4;
+  background: #fafafa;
+}
+
+.iconBtn {
+  border-radius: 999px;
+  border: 1px solid var(--bocarta-border-subtle, #dedede);
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* Campaigns */
+
+.campaignBox {
+  display: grid;
+  gap: 8px;
+}
+
+.campaignText {
+  font-size: 12px;
+  color: #777777;
+}
+
+.primaryBtn {
+  border-radius: 999px;
+  border: none;
+  padding: 7px 13px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}

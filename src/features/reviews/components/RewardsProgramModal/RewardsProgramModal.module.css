@@ -1,0 +1,461 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+}
+
+.modal {
+  width: 100%;
+  max-width: 880px;
+  max-height: min(640px, 90vh);
+  background: #ffffff;
+  border-radius: 22px;
+  border: 1px solid #e4e4e4;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+
+.header {
+  padding: 12px 16px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.headerMain {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.headerIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #777777;
+  max-width: 520px;
+}
+
+.closeBtn {
+  border-radius: 999px;
+  border: 1px solid #e4e4e4;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* Body */
+
+.body {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 0;
+  padding: 10px 14px 8px;
+  overflow: hidden;
+}
+
+.steps {
+  border-right: 1px solid #f0f0f0;
+  padding-right: 10px;
+  margin-right: 10px;
+  display: grid;
+  gap: 4px;
+}
+
+.formArea {
+  padding-left: 4px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* Responsivo */
+
+@media (max-width: 720px) {
+  .body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .steps {
+    display: none;
+  }
+  .formArea {
+    padding-left: 0;
+  }
+}
+
+/* Steps */
+
+.stepItem {
+  border-radius: 14px;
+  border: none;
+  background: transparent;
+  padding: 6px 8px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+}
+
+.stepItemActive {
+  background: #f6f6f6;
+}
+
+.stepIconWrapper {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: #f2f2f2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepIconDone {
+  color: #27ae60;
+}
+
+.stepTexts {
+  display: grid;
+  gap: 1px;
+}
+
+.stepLabel {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.stepDescription {
+  font-size: 11px;
+  color: #888888;
+}
+
+/* Step content */
+
+.step {
+  padding: 4px 4px 10px 6px;
+  display: grid;
+  gap: 10px;
+}
+
+.stepTitle {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.stepText {
+  font-size: 12px;
+  color: #777777;
+  max-width: 460px;
+}
+
+/* Fields */
+
+.fieldGroup {
+  display: grid;
+  gap: 4px;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 720px) {
+  .fieldRow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.fieldLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #777777;
+}
+
+.input,
+.textarea,
+.select {
+  border-radius: 10px;
+  border: 1px solid #dedede;
+  padding: 7px 9px;
+  font-size: 13px;
+  outline: none;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  border-color: #000000;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 64px;
+}
+
+.inlineField {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Helper text */
+
+.helperText {
+  font-size: 11px;
+  color: #888888;
+  margin-top: 2px;
+}
+
+/* Kind cards */
+
+.kindGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+@media (max-width: 720px) {
+  .kindGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.kindCard {
+  border-radius: 14px;
+  border: 1px solid #e7e7e7;
+  padding: 8px 9px;
+  background: #ffffff;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.kindCardActive {
+  border-color: #000000;
+  box-shadow: 0 0 0 1px #000000;
+}
+
+.kindIcon {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: #f4f4f4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kindTexts {
+  display: grid;
+  gap: 2px;
+}
+
+.kindLabel {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.kindDescription {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* Pills */
+
+.pillRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pill {
+  border-radius: 999px;
+  border: 1px solid #dedede;
+  padding: 4px 9px;
+  font-size: 11px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.pillActive {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+/* Checkboxes */
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #666666;
+}
+
+.checkbox input {
+  margin: 0;
+}
+
+/* Divider, subtitles */
+
+.divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 8px 0 4px;
+}
+
+.subTitle {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Summary */
+
+.summaryCard {
+  border-radius: 16px;
+  border: 1px solid #eeeeee;
+  padding: 10px 10px 9px;
+  background: #fffef4;
+  display: grid;
+  gap: 8px;
+}
+
+.summaryHeader {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.summaryIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summaryTitle {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.summarySubtitle {
+  font-size: 12px;
+  color: #777777;
+}
+
+.summaryList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.summaryList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.summaryLabel {
+  color: #777777;
+}
+
+.summaryValue {
+  font-weight: 600;
+  text-align: right;
+}
+
+.summaryHint {
+  font-size: 11px;
+  color: #777777;
+}
+
+/* Footer */
+
+.footer {
+  border-top: 1px solid #f0f0f0;
+  padding: 8px 14px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.footerRight {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.secondaryBtn {
+  border-radius: 999px;
+  border: 1px solid #dedede;
+  padding: 6px 11px;
+  font-size: 12px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.ghostBtn {
+  border-radius: 999px;
+  border: 1px solid #dedede;
+  padding: 6px 10px;
+  font-size: 12px;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.primaryBtn {
+  border-radius: 999px;
+  border: none;
+  padding: 7px 13px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #000000;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
